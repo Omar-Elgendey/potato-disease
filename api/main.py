@@ -8,6 +8,7 @@ import tensorflow as tf
 app = FastAPI()
 
 Model = tf.keras.models.load_model("models/1/model.keras")
+
 CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
 
 
@@ -29,6 +30,7 @@ async def predict(file: UploadFile = File(...)):
     image = read_file_as_image(image_data)
 
     img_batch = np.expand_dims(image, 0)
+    
     prediction = Model.predict(img_batch)
 
     predicted_class = CLASS_NAMES[np.argmax(prediction[0])]
