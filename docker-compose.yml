@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  tf_serving:
+    image: tensorflow/serving
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./models/potato_disease:/models/potato_disease
+    environment:
+      - MODEL_NAME=potato_disease

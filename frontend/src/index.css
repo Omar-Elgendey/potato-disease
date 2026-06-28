@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #F5F0E8;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.leaf-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 5 Q45 15 45 30 Q45 45 30 55 Q15 45 15 30 Q15 15 30 5Z' fill='%231B4332' opacity='0.04' transform='rotate(20 30 30)'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+.scanning-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #52B788, transparent);
+  box-shadow: 0 0 12px #52B788, 0 0 24px rgba(82,183,136,0.4);
+  animation: scan 2.5s ease-in-out infinite;
+  z-index: 20;
+}
+
+@keyframes scan {
+  0%, 100% { top: 0%; }
+  50% { top: 100%; }
+}

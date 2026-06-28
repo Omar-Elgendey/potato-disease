@@ -6,9 +6,6 @@ __pycache__/
 venv/
 .venv/
 
-# Models (optional but recommended)
-models/
-
 # Environment variables
 .env
 
