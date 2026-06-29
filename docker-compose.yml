@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   tf_serving:
     image: tensorflow/serving
@@ -9,3 +7,12 @@ services:
       - ./models/potato_disease:/models/potato_disease
     environment:
       - MODEL_NAME=potato_disease
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - TF_SERVING_URL=http://tf_serving:8501/v1/models/potato_disease:predict
+    depends_on:
+      - tf_serving
