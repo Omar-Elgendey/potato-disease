@@ -1,10 +1,14 @@
-<img width="1152" height="837" alt="image" src="https://github.com/user-attachments/assets/ab169492-5b76-4947-9e1b-fc38ab9b2175" /># Potato Disease Classification
+# Potato Disease Classification
 
 A production-style AI application for potato leaf disease classification using **Transfer Learning**, **TensorFlow Serving**, **FastAPI**, **React**, and **Docker**.
 
 ---
 
 ## Demo
+
+<p align="center">
+  <img src="images/demo.png" alt="Project Demo" width="900">
+</p>
 
 > Demo video is available on my LinkedIn profile.
 
@@ -124,7 +128,11 @@ After training the classifier head, the deeper layers of MobileNetV2 were select
 | Lowest Validation Loss | **0.0158** |
 
 ### Training Curves
-Avaliable in Notebook
+
+<p align="center">
+  <img src="images/training_curves.png" alt="Training Curves" width="900">
+</p>
+
 The learning curves indicate stable convergence with consistently high validation accuracy and low validation loss throughout training.
 
 ---
@@ -218,4 +226,6 @@ Returns:
 
 GitHub: https://github.com/Omar-Elgendey
 
-LinkedIn: *(Add your profile here)*
+LinkedIn: *(www.linkedin.com/in/omar-elgendey-b142a0357
+
+)*
